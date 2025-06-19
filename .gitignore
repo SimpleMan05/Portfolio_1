@@ -7,51 +7,38 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+build/
+
+# Environment variables
+.env
+.env.local
 *.local
 
-# Editor directories and files
-.vscode/*
+
+# Vite and tool caches
+.cache/
+.vite/
+
+# Editor directories and system files
+.vscode/
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
+Thumbs.db
+
+# Project files (VS, etc.)
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
-.env
 
-# Node modules (DO NOT commit)
-node_modules/
-
-# Build output
-dist/
-build/
-
-# Local environment variables and API keys
-.env
-.env.local
-
-# Editor and system files
-.vscode/
-.DS_Store
-*.log
-
-# OS-specific files
-Thumbs.db
-
-# Vite and other tool caches
-.cache/
-.vite/
-
-# Bolt AI configs
-.bolt/config.json
-
-# Optional lock files (you may keep this if you use Yarn)
+# Optional lock files (if not used)
 yarn.lock
 pnpm-lock.yaml
-
-.bolt
