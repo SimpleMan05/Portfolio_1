@@ -187,9 +187,15 @@ const LandingPage: React.FC<LandingPageProps> = ({ onThemeSelect }) => {
       >
         {/* Professional Side */}
         <motion.div
-          className={`w-1/2 flex flex-col items-center justify-center relative ${
-            isDark ? 'bg-gray-800' : 'bg-gray-100'
-          }`}
+          // className={`w-1/2 flex flex-col items-center justify-center relative ${
+          //   isDark ? 'bg-gray-800' : 'bg-gray-100'
+          // }`}
+          className="w-1/2 flex flex-col items-center justify-center relative bg-cover bg-no-repeat bg-fixed bg-center "
+          style={{
+            backgroundImage: isDark
+              ? `url('/src/assets/images/brain(1).jpg')`
+              : `url('/src/assets/images/brain(3).webp')`,
+          }}
           initial={{ filter: 'grayscale(100%)' }}
           animate={isAnimating ? {
             x: [0, -100, -window.innerWidth],
@@ -204,7 +210,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onThemeSelect }) => {
             }}
             className={`px-12 py-6 text-2xl font-serif border-2 transition-all duration-300 hover:scale-105 ${
               isDark 
-                ? 'border-gray-300 text-gray-300 hover:bg-gray-300 hover:text-gray-800' 
+                ? 'border-gray-300 text-gray-800 hover:bg-gray-300 hover:text-gray-800' 
                 : 'border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white'
             }`}
             whileHover={{ scale: 1.05 }}
@@ -216,10 +222,16 @@ const LandingPage: React.FC<LandingPageProps> = ({ onThemeSelect }) => {
 
         {/* Creative Side */}
         <motion.div
-          className="w-1/2 flex flex-col items-center justify-center relative bg-gradient-to-br from-purple-600 via-pink-600 to-cyan-600"
+          // className="w-1/2 flex flex-col items-center justify-center relative bg-gradient-to-br from-purple-600 via-pink-600 to-cyan-600"
           // style={{
-          //   backgroundImage: "url('/professional-bg.jpg')" // <- Your image path here
+          //   backgroundImage: "url('src/assets/images/professional-bg.jpg')" // <- Your image path here
           // }}
+          className="w-1/2 flex flex-col items-center justify-center relative bg-cover bg-no-repeat bg-fixed bg-center"
+          style={{
+            backgroundImage: isDark
+              ? `url('/src/assets/images/brain(1).jpg')`
+              : `url('/src/assets/images/brain(3).webp')`,
+          }}
           initial={{ filter: 'brightness(1)' }}
           animate={isAnimating ? {
             x: [0, 100, window.innerWidth],
